@@ -1,0 +1,170 @@
+/* Constantin K. */
+
+body {
+  font-family: "Arial", cursive;
+  color: #122655;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+  background-color: #e1c071;
+  background-image: url("background_texture_hist.jpg"); /* Source : https://jooinn.com/images/blank-parchment-texture-3.jpg */
+  background-size: 100%;
+  text-align: justify;
+  margin: 0px;
+}
+
+h1 {
+  text-align: center;
+  background-color: darkgray;
+  font-family: "Lucida Handwriting", cursive;
+  margin: 8px;
+}
+h1 a {
+  text-decoration: none;
+}
+h1 a:hover {
+  text-decoration: none;
+}
+
+
+img {
+  width:100%
+}
+
+a {
+  color: Navy;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  margin: 8px;
+  gap: 8px;
+}
+article {
+  width: 66.67%;
+}
+aside {
+  width: 33.33%;
+}
+footer {
+  font-size: 12px;
+}
+
+#home-credits {
+  position: absolute;
+  bottom: 0;
+  margin: 8px;
+}
+
+
+.blue {
+  color: blue;
+}
+.white {
+  color: white;
+}
+.red {
+  color: red;
+}
+.tricolor a {
+  text-decoration: none;
+}
+
+hr {
+  width: 100%;
+  margin: 0;
+  color: black;
+  text-shadow: none;
+  border: none;
+  border-top: 3px solid black;
+}
+
+#timeline {
+  width: 100%;
+  min-width: 1180px;
+  height: 150.5px;
+  --height: 146px;
+  border-collapse: collapse;
+}
+#timeline-start, #timeline-end {
+  width: 6%;  
+}
+.timeline-century {
+  width: 8%;
+  border: 3px solid black;
+  vertical-align: top;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+.empty-timeline-century {
+  width: 3%;
+  border: 3px solid black;
+  vertical-align: top;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+
+
+
+#timeline-start {
+  position: relative;
+  border: solid black;
+  border-width: 3px 0 3px 0;
+}
+
+
+#timeline-start::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  width: calc(var(--height) / 1.41);
+  height: calc(var(--height) / 1.41);
+  transform: rotate(-45deg);
+  transform-origin: 4px calc(100% - 0.75px);
+}
+
+
+#timeline-end {
+  position: relative;
+  border-style: solid;
+  border-width: 0 0 0 0;
+}
+
+
+#timeline-end::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  width: calc(var(--height) / 1.41);
+  height: calc(var(--height) / 1.41);
+  transform: rotate(-45deg);
+  transform-origin: 1.25px calc(100% + 1px);
+}
+
+
+@media (max-width: 1200px) {
+  #timeline {
+    min-width: 1200px;
+    position: absolute;
+    left: 50%;
+    transform: rotate(90deg);
+    transform-origin: 0% 50%;
+  }
+  #home-credits {
+    position: absolute;
+    transform: translateY(calc(1200px - 150%));
+  }
+}
